@@ -1,112 +1,126 @@
-import Image from "next/image";
-
+"use client"; // Import the correct component for Navbar
+import NavbarOptions from "@/components/navbarMenu";
+import SheduleADemoButton from "@/components/scheduleDemoButton";
+import ProductElements from "@/components/productElements";
+import { ArrowRight } from "lucide-react";
+import CardMenu from "@/components/cardMenu";
+import CardTeams from "@/components/cardTeams";
+import Institutions from "@/components/Institutions";
+import ReasonsPoints from "@/components/reasons";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen relative bg-white flex-col ">
+      <div className="flex justify-evenly items-center flex-row  h-auto w-screen px-16 gap-10 shadow-sm  z-10 bg-white">
+        <div className="flex flex-row  items-center gap-10">
+          <img
+            src="./Logo.png"
+            alt="logo"
+            className=" w-[160px] h-[44px] object-fit flex items-center justify-center"
+          />
+          <NavbarOptions />
+        </div>
+        <div className="flex flex-row justify-center  items-center gap-2">
+          <div className="flex flex-row items-center gap-1 ">
+            <img src="./secured-lock.svg" className="h-[14px] w-[16px] " />
+            <p className=" font-semibold text-customGray">Login</p>
+            <ArrowRight size={20} strokeWidth={1.2} />
+          </div>
+          <SheduleADemoButton />
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="py-12 my-12 flex  justify-center flex-col items-center">
+        <div className="mb-[24px] pb-[48px]">
+          <div className="mx-24  px-4 flex flex-col justify-start h-[300px] w-[920px] ">
+            <p className="h-[125px] w-full text-center text-pretty font-semibold text-5xl pb-[10px]">
+              Empowering enrollment growth at scale, globally
+            </p>
+            <p className="text-center text-wrap w-full mt-[5px] mb-[30px] h-[72px]">
+              Whether it’s boosting team productivity or student experience,
+              optimizing marketing spends or growing enrollments, Meritto’s
+              unified platform equips educational organizations to do it all.
+              Purpose-built by those who know the education industry better.
+            </p>
+            <div className="mt-[8px] mb-[16px] flex justify-center">
+              <SheduleADemoButton />
+            </div>
+          </div>
+        </div>
+        <div>
+          <ProductElements />
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+      <div className="w-full h-auto bg-[#F3F9FF] py-[80px] flex flex-col items-center justify-start">
+        <div className="mx-24  px-4 flex flex-col  h-40 w-[920px] ">
+          <p className=" h-10 w-full text-center text-pretty font-semibold text-2xl pb-[10px]">
+            We are the Operating System for Student Recruitment and Enrollment
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+          <p className="text-center text-wrap w-full mt-[5px] mb-[30px] h-[72px]">
+            Our comprehensive suite of purpose-built tools functions like a
+            well-oiled operating system, seamlessly addressing every aspect of
+            the process. While these solutions stand out individually for their
+            robust capabilities, their real impact is realized when you enroll
+            as one.
           </p>
-        </a>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
+        <CardMenu />
+      </div>
+      <div className="h-auto w-full pt-16  flex flex-col items-center justify-center ">
+        <div className="flex  items-center justify-center  w-[1110px]  h-[72px]  mb-10">
+          <p className="text-center text-wrap font-semibold text-2xl h-full  w-96">
+            Everything you need to make your teams agile and productive
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+        </div>
+        <CardTeams />
+      </div>
+      <div className="w-full h-auto flex flex-col items-center justify-center pt-20  pb-10 ">
+        <div className=" mx-44  px-4 flex flex-col  h-40 w-[1110px] ">
+          <p className="  h-8 w-full text-center text-pretty font-semibold text-3xl mb-[10px]">
+            Trusted by over 1000 educational organizations
           </p>
-        </a>
+          <p className="text-center text-base text-pretty w-full mt-[5px] mb-[30px] h-[72px]">
+            From EdTech Companies, Coaching & Training Institutes, Study Abroad
+            Consultants, K12 Schools, Play & Pre-Schools to Higher Education
+            Institutions, everybody loves us for what we do.
+          </p>
+        </div>
+        <Institutions />
+      </div>
+      <div className="w-full h-auto  mt-12 bg-[#F3F9FF]">
+        <div className="flex flex-col mx-44  px-4  py-12 items-center justify-center">
+          <p className=" h-10 pb-2 text-center text-2xl  flex items-center justify-center  font-semibold">
+            Will Meritto work for my educational organization?
+          </p>
+          <p className=" mb-3">
+            Yes, if you are ready to scale. Here are reasons why we’re known as
+            game-changers in student recruitment and enrollments
+          </p>
+          <div className="flex flex-row  mt-12  -mx-4 justify-between w-auto">
+            <div className="w-1/2">
+              <ReasonsPoints />
+            </div>
+            <div className="w-1/2 flex items-center justify-center">
+              <img src="./screenshot.png" alt="sc" className=" w-full  h-4/5" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="h-96 w-full flex flex-row justify-around items-center">
+        <div className="h-96 w-1/2 flex flex-col items-center justify-center sticky top-0">
+          <p className="text-2xl text-start font-semibold w-1/2 text-wrap pb-1">
+            Connect Meritto with apps and integrations you use
+          </p>
+          <p className="text-center text-sm">
+            Expand the possibilities of what can be achieved
+          </p>
+          <div className="flex flex-row justify-start items-center gap-1 pt-3">
+            <p className="text-customBlue">Learn More</p>
+            <ArrowRight size={22} strokeWidth={2.2} color={"#4285F4"} />
+          </div>
+        </div>
+        <div className="h-96 w-1/2 flex items-center">
+          <img src="/companies.png" alt="sc" className="w-11/12 h-[1050px] object-fit" />
+        </div>
       </div>
     </main>
   );

@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
+import SheduleADemoButton from "@/components/scheduleDemoButton";
+import NavbarOptions from "@/components/navbarMenu";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -11,12 +18,26 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <div className=" h-8 w-screen bg-[#0C1C40]">
+          <p className=" flex md:text-xs text-white  justify-center  font-sans text-pretty p-1">
+            Just launched: Echo, a WhatsApp live chat platform to make
+            contextual conversations that convert.
+          </p>
+        </div>
+
+        {children}
+      </body>
     </html>
   );
 }
