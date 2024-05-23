@@ -43,24 +43,24 @@ const elements = [
 
 const CardTeams = () => {
   return (
-    <div className="flex justify-center flex-wrap w-[1110px]">
+    <div className="flex sm:justify-center  justify-start flex-wrap sm:w-screen">
       {elements.map((element, index) => {
         // console.log(element);
         return (
           <Card
             key={index}
-            className="w-[320px] h-[260px] m-4 rounded-none shadow-none border-0 p-0 "
+            className="w-[320px] sm:h-[260px]  h-40 m-4 rounded-none shadow-none border-0 sm:p-0"
           >
             <CardHeader className="pb-0">
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col sm:items-center sm:justify-center justify-start">
                 <img src={element.logo} data-src={element.logo+" h"} alt="logo"  className=" h-8 w-8"/>
                 <CardTitle className="pt-1 text-lg">{element.title}</CardTitle>
                 </div>
             </CardHeader>
-            <CardContent>
-              <p className="text-center text-pretty text-sm h-20">{element.discription}</p>
+            <CardContent className="sm:justify-center justify-start">
+              <p className="sm:text-center text-start text-pretty text-sm h-20">{element.discription}</p>
             </CardContent>
-            <CardFooter className="flex  justify-center">
+            <CardFooter className="flex  sm:justify-center justify-start">
                 <button className="border-2 hover:text-white border-[#4285F4] hover:bg-[#4285F4] text-[#4285F4] text-center text-sm  rounded-sm w-1/2 py-1">
                     Learn More
                 </button>

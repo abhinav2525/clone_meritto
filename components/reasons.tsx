@@ -31,17 +31,17 @@ const elements = [
 
 const ReasonsPoints = () => {
   return (
-    <div className="flex flex-col justify-start w-3/4">
+    <div className="flex flex-col justify-start sm:w-3/4">
       {
       elements.map((element, index) => (
-        <div key={index} className="flex flex-col justify-start m-2 w-full">
-        <div  className="flex flex-row justify-start items-center gap-1">
+        <div key={index} className="flex flex-col justify-start m-2">
+        <div  className="flex flex-row justify-start items-center gap-1 ">
           <CircleCheck size={20} strokeWidth={2.25} />
-          <p className="text-xl font-semibold">{element.heading}</p>
+          <p className="sm:text-xl font-semibold">{element.heading}</p>
         </div>
         {element.points.map((point, index) => (
             <div key={index} className=" mb-3">
-                <p className=" text-start text-wrap text-sm p-0">{point}</p>
+                <p className=" text-start text-wrap text-sm p-0 ">{point}</p>
             </div>
         ))}
         </div>

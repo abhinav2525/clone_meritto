@@ -29,8 +29,8 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <div className=" h-8 w-screen bg-[#0C1C40]">
-          <p className=" flex md:text-xs text-white  justify-center  font-sans text-pretty p-1">
+        <div className=" h-10 sm:h-8  w-screen bg-[#0C1C40]">
+          <p className=" flex text-[9px] text-white  justify-center  font-sans text-wrap text-center p-1">
             Just launched: Echo, a WhatsApp live chat platform to make
             contextual conversations that convert.
           </p>

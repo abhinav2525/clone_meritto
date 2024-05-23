@@ -9,7 +9,7 @@ const NavbarMenu = () => {
 
   return (
     <>
-     <div className="flex flex-row justify-center items-center h-20 gap-4">
+     <div className="hidden md:flex md:flex-row md:justify-center md:items-center h-20 gap-4">
         {
           
           menu.map((item, index) => (

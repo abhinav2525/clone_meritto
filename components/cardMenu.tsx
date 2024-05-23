@@ -14,7 +14,7 @@ import { Check, Key, Tag } from "lucide-react";
 const elements = [
   {
     title: "Enrollment Cloud",
-    logo: "./icon-enrollment-cloud.png",
+    logo: "/icon-enrollment-cloud.png",
     discription:
       "Take control of the entire funnel from inquiry to enrollment and double down on your institution’s efforts to attract, engage and enroll on a single platform.",
     KeyFeatures: [
@@ -28,7 +28,7 @@ const elements = [
   },
   {
     title: "Education CRM",
-    logo: "./icon-education-CRM.png",
+    logo: "/icon-education-CRM.png",
     discription:
       "Equip your sales & marketing teams to be super-efficient as they contextually engage and convert more students. Enroll faster with the in-built payment platform and track sales campaign effectiveness.",
     KeyFeatures: [
@@ -42,7 +42,7 @@ const elements = [
   },
   {
     title: "Application Platform",
-    logo: "./icon-application-platform.png",
+    logo: "/icon-application-platform.png",
     discription:
       "Accelerate your application-to-enrollment rate as you equip your admissions teams to create advanced custom forms, manage the post-application GD-PI, and seamlessly do everything in between.",
     KeyFeatures: [
@@ -56,7 +56,7 @@ const elements = [
   },
   {
     title: "Education Payment Cloud",
-    logo: "./icon-education-payment-cloud.png",
+    logo: "/icon-education-payment-cloud.png",
     discription:
       "Make fee collection easier, faster, and more secure across all student touchpoints. Automate fee reminders, configure payment splits and late fees all while you get run time settlement reports, finance dashboards, and more!",
     KeyFeatures: [
@@ -70,7 +70,7 @@ const elements = [
   },
   {
     title: "Education Chatbot",
-    loog: "./icon-education-chatbot.png",
+    logo: "/icon-education-chatbot.png",
     discription:
       "Put the smartest admission counselor to work who can convert all inbound and advertising traffic into qualified leads by contextually engaging with them on your website. Uncover intent signals and increase your ROI.",
     KeyFeatures: [
@@ -96,7 +96,7 @@ const CardMenu = () => {
         }
         // console.log(color);
         return (
-        <Card key={index} className=" w-96  h-auto">
+        <Card key={index} className=" sm:w-96  w-[360px]  h-auto p-4">
           <CardHeader className="flex flex-row items-center">
             <img
               src={element.logo}
